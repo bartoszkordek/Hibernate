@@ -15,7 +15,7 @@ public class Product {
     @ManyToOne
     @JoinColumn(name="CATEGORY_FK")
     private Category category;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private Set<Invoice> invoices;
 
     public Product(){

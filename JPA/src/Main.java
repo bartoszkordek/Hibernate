@@ -69,8 +69,8 @@ public class Main {
         productListForCategory2.add(product3);
 
         em.persist(product1);
-        em.persist(product2);
-        em.persist(product3);
+        //em.persist(product2);
+        //em.persist(product3);
 
         em.persist(supplier1);
         em.persist(supplier2);
@@ -79,9 +79,9 @@ public class Main {
         em.persist(category2);
 
         em.persist(invoice1);
-        em.persist(invoice2);
-        em.persist(invoice3);
-
+        //em.persist(invoice2);
+        //em.persist(invoice3);
+/*
         Invoice invoice = em.find(Invoice.class, 8);
         for(Product product : invoice.getProducts())
             System.out.println("Product Name: " + product.getProductName());
@@ -90,7 +90,7 @@ public class Main {
         for(Invoice inv : product.getInvoices())
             System.out.println("Invoice ID: " + inv.getInvoiceID() +
                     " Invoice Number: " + inv.getInvoiceNumber());
-
+*/
         etx.commit();
         em.close();
     }

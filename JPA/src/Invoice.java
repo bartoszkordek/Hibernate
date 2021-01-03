@@ -9,7 +9,7 @@ public class Invoice {
     private int InvoiceID;
     private int InvoiceNumber;
     private int Quantity;
-    @ManyToMany(mappedBy = "invoices")
+    @ManyToMany(mappedBy = "invoices", cascade = CascadeType.PERSIST)
     private Set<Product> products;
 
     public Invoice(){
