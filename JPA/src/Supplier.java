@@ -3,6 +3,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@SecondaryTable(name = "ADDRESS")
 public class Supplier {
 
     @Id
@@ -14,20 +15,30 @@ public class Supplier {
     @OneToMany
     @JoinColumn(name="SUPPLIER_FK")
     private Set<Product> products;
-    @Embedded
-    private Address address;
+    /*@Embedded
+    private Address address;*/
+    @Column(table = "ADDRESS")
+    private String city;
+    @Column(table = "ADDRESS")
+    private String zipCode;
+    @Column(table = "ADDRESS")
+    private String street;
+
 
     public Supplier(){
 
     }
 
     public Supplier(String CompanyName, Set<Product> products,
-                    Address address){
+                    String city, String zipCode, String street){
         this.CompanyName = CompanyName;
         //this.Street = Street;
         //this.City = City;
         this.products = products;
-        this.address = address;
+        //this.address = address;
+        this.city = city;
+        this.zipCode = zipCode;
+        this.street = street;
     }
 
     public int getSupplierID() {
