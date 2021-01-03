@@ -31,8 +31,11 @@ public class Main {
         Category category1 = new Category("Mrożonki", productListForCategory1);
         Category category2 = new Category("Przekąski", productListForCategory2);
 
-        Supplier supplier1 = new Supplier("Tesco", "Kapelanka", "Kraków", productSetForSupplier1);
-        Supplier supplier2 = new Supplier("Żabka", "Sołtysowka", "Kraków", productSetForSupplier2);
+        Address supplier1Address = new Address("Kraków", "30-226", "Kapelanka");
+        Address supplier2Address = new Address("Kraków", "31-589", "Sołtysowka");
+
+        Supplier supplier1 = new Supplier("Tesco", productSetForSupplier1, supplier1Address);
+        Supplier supplier2 = new Supplier("Żabka", productSetForSupplier2, supplier2Address);
 
         Invoice invoice1 = new Invoice(123,10,productSetForInvoice1);
         Invoice invoice2 = new Invoice(124,10,productSetForInvoice2);

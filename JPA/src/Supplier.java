@@ -9,21 +9,25 @@ public class Supplier {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int SupplierID;
     private String CompanyName;
-    private String Street;
-    private String City;
+    //private String Street;
+    //private String City;
     @OneToMany
     @JoinColumn(name="SUPPLIER_FK")
     private Set<Product> products;
+    @Embedded
+    private Address address;
 
     public Supplier(){
 
     }
 
-    public Supplier(String CompanyName, String Street, String City, Set<Product> products){
+    public Supplier(String CompanyName, Set<Product> products,
+                    Address address){
         this.CompanyName = CompanyName;
-        this.Street = Street;
-        this.City = City;
+        //this.Street = Street;
+        //this.City = City;
         this.products = products;
+        this.address = address;
     }
 
     public int getSupplierID() {
@@ -39,8 +43,6 @@ public class Supplier {
         return "Supplier{" +
                 "SupplierID=" + SupplierID +
                 ", CompanyName='" + CompanyName + '\'' +
-                ", Street='" + Street + '\'' +
-                ", City='" + City + '\'' +
                 ", products=" + products +
                 '}';
     }
