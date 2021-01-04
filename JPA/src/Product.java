@@ -49,7 +49,6 @@ public class Product {
                 "ProductID=" + ProductID +
                 ", ProductName='" + ProductName + '\'' +
                 ", UnitsInStock=" + UnitsInStock +
-                ", supplier=" + supplier.getSupplierID() + ' ' + supplier.getCompanyName() +
                 ", category=" + category.getCategoryID() + ' ' + category.getName() +
                 '}';
     }

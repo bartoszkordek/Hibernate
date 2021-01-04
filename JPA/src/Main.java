@@ -34,10 +34,17 @@ public class Main {
         //Address supplier1Address = new Address("Kraków", "30-226", "Kapelanka");
         //Address supplier2Address = new Address("Kraków", "31-589", "Sołtysowka");
 
-        Supplier supplier1 = new Supplier("Tesco", productSetForSupplier1,
-                "Kraków", "30-226", "Kapelanka");
-        Supplier supplier2 = new Supplier("Żabka", productSetForSupplier2,
-                "Kraków", "31-589", "Sołtysowka");
+        Supplier supplier1 = new Supplier("Tesco", "Kapelanka", "Kraków", "30-226",
+                "340727370997063", productSetForSupplier1);
+
+        Supplier supplier2 = new Supplier("Żabka", "Sołtysowska", "Kraków", "31-589",
+                "371989964645795", productSetForSupplier2);
+
+        Customer customer1 = new Customer("Offices", "Długa", "Kraków", "31-146",
+                10);
+
+        Customer customer2 = new Customer("Company", "Szeroka", "Kraków", "30-146",
+                5);
 
         Invoice invoice1 = new Invoice(123,10,productSetForInvoice1);
         Invoice invoice2 = new Invoice(124,10,productSetForInvoice2);
@@ -79,6 +86,9 @@ public class Main {
 
         em.persist(supplier1);
         em.persist(supplier2);
+
+        em.persist(customer1);
+        em.persist(customer2);
 
         em.persist(category1);
         em.persist(category2);

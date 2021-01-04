@@ -8,4 +8,6 @@
     <entity class="Invoice"/>
     <entity class="Product"/>
     <entity class="Supplier"/>
+    <entity class="Customer"/>
+    <entity class="Company"/>
 </entity-mappings>
