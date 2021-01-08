@@ -1,7 +1,7 @@
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Company {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
