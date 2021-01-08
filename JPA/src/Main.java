@@ -96,6 +96,17 @@ public class Main {
         em.persist(invoice1);
         //em.persist(invoice2);
         //em.persist(invoice3);
+/*
+        Company companyId7 = em.find(Supplier.class,7);
+        Company companyId8 = em.find(Supplier.class,8);
+        Company companyId9 = em.find(Customer.class,9);
+        Company companyId10 = em.find(Customer.class,10);
+
+        System.out.println(companyId7.toString());
+        System.out.println(companyId8.toString());
+        System.out.println(companyId9.toString());
+        System.out.println(companyId10.toString());
+*/
 
         Supplier supplierId7 = em.find(Supplier.class, 7);
         Supplier supplierId8 = em.find(Supplier.class, 8);
@@ -106,6 +117,7 @@ public class Main {
         System.out.println(supplierId8.toString());
         System.out.println(customerId9.toString());
         System.out.println(customerId10.toString());
+
 /*
         Invoice invoice = em.find(Invoice.class, 8);
         for(Product product : invoice.getProducts())
